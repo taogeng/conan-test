@@ -9,7 +9,7 @@ class TestConan(ConanFile):
 
     def build(self):
         msbuild = MSBuild(self)
-        definitions = {"TEST_DEFINE":None}
+        definitions = {"ROLE_APP1":None}
         msbuild.build("test.sln", upgrade_project=False, definitions=definitions, verbosity="normal")
-        
+
 
